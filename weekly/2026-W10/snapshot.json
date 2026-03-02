@@ -1,104 +1,50 @@
 {
   "week": "2026-W10",
   "window": {
-    "start_utc": "2026-02-23 14:16:57",
-    "end_utc": "2026-03-02 14:16:57"
+    "start_utc": "2026-03-02 00:00:00",
+    "end_utc": "2026-03-09 00:00:00"
   },
   "totals": {
-    "alerts": 164,
-    "hit_target": 86,
-    "hit_stop": 17,
-    "expired": 7,
-    "open": 54,
+    "alerts": 0,
+    "hit_target": 0,
+    "hit_stop": 0,
+    "expired": 0,
+    "open": 0,
     "ambiguous": 0
   },
   "resolved": {
-    "count": 103,
-    "wins": 86,
-    "losses": 17,
-    "win_rate": 0.8349514563106796
+    "count": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_rate": 0.0
   },
   "targets": {
-    "t1_reached": 86,
+    "t1_reached": 0,
     "t2_reached": 0
   },
   "rr": {
-    "avg_t1": 6.155625,
-    "avg_t2": 11.577625000000001,
-    "n_t1": 160,
-    "n_t2": 160
+    "avg_t1": null,
+    "avg_t2": null,
+    "n_t1": 0,
+    "n_t2": 0
   },
-  "by_market": {
-    "equities": {
-      "total": 82,
-      "hit_target": 24,
-      "hit_stop": 4,
-      "expired": 7,
-      "open": 47
-    },
-    "crypto": {
-      "total": 82,
-      "hit_target": 62,
-      "hit_stop": 13,
-      "expired": 0,
-      "open": 7
-    }
-  },
-  "by_tier": {
-    "pro": {
-      "total": 152,
-      "hit_target": 80,
-      "hit_stop": 17,
-      "expired": 7,
-      "open": 48
-    },
-    "starter": {
-      "total": 12,
-      "hit_target": 6,
-      "hit_stop": 0,
-      "expired": 0,
-      "open": 6
-    }
-  },
-  "by_setup_type": {
-    "Liquidity Sweep + Reclaim": {
-      "total": 59,
-      "resolved": 26,
-      "wins": 18,
-      "t2": 0
-    },
-    "Break + Retest": {
-      "total": 105,
-      "resolved": 77,
-      "wins": 68,
-      "t2": 0
-    }
-  },
-  "by_timeframe": {
-    "H1": {
-      "total": 102,
-      "resolved": 81,
-      "wins": 69
-    },
-    "H4": {
-      "total": 62,
-      "resolved": 22,
-      "wins": 17
-    }
-  },
+  "by_market": {},
+  "by_tier": {},
+  "by_setup_type": {},
+  "by_timeframe": {},
   "validation_v2": {
-    "median_resolution_seconds": 790.0,
-    "avg_resolution_seconds": 3795.8155339805826,
-    "fastest_resolution_seconds": 2.0,
-    "slowest_resolution_seconds": 71363.0,
-    "longest_open_seconds": 249446.212583,
-    "max_consecutive_losses": 9,
-    "max_consecutive_wins": 27,
-    "unmapped_status_events": 0
+    "median_resolution_seconds": null,
+    "avg_resolution_seconds": null,
+    "fastest_resolution_seconds": null,
+    "slowest_resolution_seconds": null,
+    "longest_open_seconds": null,
+    "max_consecutive_losses": 0,
+    "max_consecutive_wins": 0,
+    "unmapped_status_events": 110
   },
   "integrity": {
     "ledger_slice_sha256": "40b8d63b7d80ecfbf38c716b96293f38a89f8fbb7f23ab4795819d3eed3e5f18",
-    "generated_at_utc": "2026-03-02 14:16:57",
-    "engine_version": "v1"
+    "generated_at_utc": "2026-03-09 00:00:00",
+    "engine_version": "v2"
   }
 }

@@ -16,20 +16,6 @@ def iso_week_id(dt: datetime) -> str:
     y, w, _ = dt.isocalendar()
     return f"{y}-W{w:02d}"
 
-def iso_week_start_utc(week_id: str) -> datetime:
-    # week_id format: YYYY-WNN (ISO week)
-    y_str, w_str = week_id.split("-W")
-    y = int(y_str)
-    w = int(w_str)
-    # ISO week: Monday is day 1, normalized to 00:00:00 UTC
-    return datetime.fromisocalendar(y, w, 1).replace(tzinfo=timezone.utc, hour=0, minute=0, second=0, microsecond=0)
-
-def iso_week_bounds(week_id: str) -> tuple[datetime, datetime]:
-    # [start, end) where end is next Monday 00:00 UTC
-    start = iso_week_start_utc(week_id)
-    end = start + timedelta(days=7)
-    return start, end
-
 def sha256_hex(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
@@ -191,9 +177,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--ledger", required=True, help="Path to alerts_ledger.jsonl")
     ap.add_argument("--out-dir", required=True, help="Path to proof archive repo root")
-    ap.add_argument("--week-id", default=None, help="ISO week id YYYY-WNN. If omitted, uses current UTC ISO week.")
-    ap.add_argument("--use-rolling", action="store_true", help="Use rolling window (requires --days). Default is calendar ISO week.")
-    ap.add_argument("--days", type=int, default=7, help="Rolling window size in days (default 7). Used only with --use-rolling.")
+    ap.add_argument("--days", type=int, default=7, help="Rolling window size in days (default 7)")
     ap.add_argument("--engine-version", default="v1", help="Engine version string written into snapshots")
     ap.add_argument("--now-utc", default=None, help="Override now UTC (ISO, e.g. 2026-03-02T21:30:00Z)")
     ap.add_argument("--rebuild-manifest", action="store_true", help="Rebuild manifest after writing")
@@ -204,15 +188,8 @@ def main():
     (out_root / "weekly").mkdir(parents=True, exist_ok=True)
 
     now = parse_ts(args.now_utc) if args.now_utc else datetime.now(timezone.utc)
-
-    # Calendar ISO week is the default (enterprise/audit style).
-    # Use --use-rolling to keep the previous rolling N-day behavior.
-    if args.use_rolling:
-        start_utc, end_utc = window_bounds(now, args.days)
-        week = iso_week_id(end_utc)
-    else:
-        week = args.week_id if args.week_id else iso_week_id(now)
-        start_utc, end_utc = iso_week_bounds(week)
+    start_utc, end_utc = window_bounds(now, args.days)
+    week = iso_week_id(end_utc)
 
     alerts = []
     statuses = []
@@ -236,7 +213,7 @@ def main():
     alerts_w = []
     for a in alerts:
         created = parse_ts(a["created_at_utc"])
-        if start_utc <= created < end_utc:
+        if start_utc <= created <= end_utc:
             a["_created_dt"] = created
             alerts_w.append(a)
 

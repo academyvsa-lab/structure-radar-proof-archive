@@ -1,41 +1,41 @@
 {
-  "generated_at_utc": "2026-03-02 14:16:57",
+  "generated_at_utc": "2026-03-02 14:55:44",
   "weeks": [
     {
       "week": "2026-W10",
       "totals": {
-        "alerts": 164,
-        "hit_target": 86,
-        "hit_stop": 17,
-        "expired": 7,
-        "open": 54,
+        "alerts": 0,
+        "hit_target": 0,
+        "hit_stop": 0,
+        "expired": 0,
+        "open": 0,
         "ambiguous": 0
       },
       "resolved": {
-        "count": 103,
-        "wins": 86,
-        "losses": 17,
-        "win_rate": 0.8349514563106796
+        "count": 0,
+        "wins": 0,
+        "losses": 0,
+        "win_rate": 0.0
       },
       "validation_v2": {
-        "median_resolution_seconds": 790.0,
-        "avg_resolution_seconds": 3795.8155339805826,
-        "fastest_resolution_seconds": 2.0,
-        "slowest_resolution_seconds": 71363.0,
-        "longest_open_seconds": 249446.212583,
-        "max_consecutive_losses": 9,
-        "max_consecutive_wins": 27,
-        "unmapped_status_events": 0
+        "median_resolution_seconds": null,
+        "avg_resolution_seconds": null,
+        "fastest_resolution_seconds": null,
+        "slowest_resolution_seconds": null,
+        "longest_open_seconds": null,
+        "max_consecutive_losses": 0,
+        "max_consecutive_wins": 0,
+        "unmapped_status_events": 110
       },
       "targets": {
-        "t1_reached": 86,
+        "t1_reached": 0,
         "t2_reached": 0
       },
       "rr": {
-        "avg_t1": 6.155625,
-        "avg_t2": 11.577625000000001,
-        "n_t1": 160,
-        "n_t2": 160
+        "avg_t1": null,
+        "avg_t2": null,
+        "n_t1": 0,
+        "n_t2": 0
       }
     }
   ]
