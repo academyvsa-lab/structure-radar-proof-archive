@@ -1,4 +1,4 @@
-# QueryIQ Proof Archive Pack (Cloudflare Pages, premium index)
+# QueryIQ Proof Archive Pack
 
 This pack builds a public Proof Archive:
 - One premium index page (dashboard style)
@@ -6,7 +6,7 @@ This pack builds a public Proof Archive:
 - Automatic index table via manifest.json
 - Safe weekly push to GitHub -> Cloudflare Pages auto-deploy
 
-## Your definitions (locked)
+## Definitions
 - Resolved trades: Target Hits + Stop Hits
 - Terminal events: Target Hits + Stop Hits + Expired
 - Open pipeline: Open only
@@ -22,10 +22,3 @@ Scripts:
 - scripts/build_weekly_proof.py
 - scripts/push_proof.sh
 - scripts/run_weekly_proof.sh
-
-## Expected output rule
-Whenever you run a terminal command from this guide, you will see an "Expected output" block.
-
-
-## Branding (Proof Archive optimized)
-- assets/q-proof.svg is a subtle monochrome Q mark designed for audit pages.
