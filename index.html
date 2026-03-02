@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>System Proof Archive</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="wrap">
+    <div class="top">
+      <div>
+        <div class="brand">
+          <img src="assets/q-proof.svg" alt="Q" class="qmark" />
+          <h1>System Proof Archive</h1>
+        </div>
+        <p class="sub">
+          Weekly audit reports (UTC). Resolved = Target Hits + Stop Hits. Terminal includes Expired.
+        </p>
+      </div>
+      <div class="pill">Educational / decision-support only</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="cards" id="kpiCards"></section>
+
+    <section class="tableBox">
+      <div class="tableHead">
+        <div class="tableTitle">Weeks</div>
+        <div class="muted" id="lastUpdated"></div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Week</th>
+            <th>Total</th>
+            <th>Resolved</th>
+            <th>Win rate</th>
+            <th>Expired</th>
+            <th>Open</th>
+            <th>Median resolution</th>
+            <th>Max loss streak</th>
+            <th>Links</th>
+          </tr>
+        </thead>
+        <tbody id="weeksTbody">
+          <tr><td colspan="9" class="muted">Loading manifest...</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer class="foot muted">
+      Proof artifacts are versioned weekly. Snapshot JSON is machine-readable.
+    </footer>
+  </main>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
