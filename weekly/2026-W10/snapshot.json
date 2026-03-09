@@ -5,45 +5,99 @@
     "end_utc": "2026-03-09 00:00:00"
   },
   "totals": {
-    "alerts": 0,
-    "hit_target": 0,
-    "hit_stop": 0,
-    "expired": 0,
-    "open": 0,
+    "alerts": 396,
+    "hit_target": 232,
+    "hit_stop": 106,
+    "expired": 14,
+    "open": 44,
     "ambiguous": 0
   },
   "resolved": {
-    "count": 0,
-    "wins": 0,
-    "losses": 0,
-    "win_rate": 0.0
+    "count": 338,
+    "wins": 232,
+    "losses": 106,
+    "win_rate": 0.6863905325443787
   },
   "targets": {
-    "t1_reached": 0,
+    "t1_reached": 232,
     "t2_reached": 0
   },
   "rr": {
-    "avg_t1": null,
-    "avg_t2": null,
-    "n_t1": 0,
-    "n_t2": 0
+    "avg_t1": 4.6143732590529245,
+    "avg_t2": 8.68590529247911,
+    "n_t1": 359,
+    "n_t2": 359
   },
-  "by_market": {},
-  "by_tier": {},
-  "by_setup_type": {},
-  "by_timeframe": {},
+  "by_market": {
+    "crypto": {
+      "total": 281,
+      "hit_target": 167,
+      "hit_stop": 75,
+      "expired": 3,
+      "open": 36
+    },
+    "equities": {
+      "total": 115,
+      "hit_target": 65,
+      "hit_stop": 31,
+      "expired": 11,
+      "open": 8
+    }
+  },
+  "by_tier": {
+    "starter": {
+      "total": 31,
+      "hit_target": 22,
+      "hit_stop": 4,
+      "expired": 0,
+      "open": 5
+    },
+    "pro": {
+      "total": 365,
+      "hit_target": 210,
+      "hit_stop": 102,
+      "expired": 14,
+      "open": 39
+    }
+  },
+  "by_setup_type": {
+    "Liquidity Sweep + Reclaim": {
+      "total": 184,
+      "resolved": 141,
+      "wins": 107,
+      "t2": 0
+    },
+    "Break + Retest": {
+      "total": 212,
+      "resolved": 197,
+      "wins": 125,
+      "t2": 0
+    }
+  },
+  "by_timeframe": {
+    "H4": {
+      "total": 107,
+      "resolved": 91,
+      "wins": 59
+    },
+    "H1": {
+      "total": 289,
+      "resolved": 247,
+      "wins": 173
+    }
+  },
   "validation_v2": {
-    "median_resolution_seconds": null,
-    "avg_resolution_seconds": null,
-    "fastest_resolution_seconds": null,
-    "slowest_resolution_seconds": null,
-    "longest_open_seconds": null,
-    "max_consecutive_losses": 0,
-    "max_consecutive_wins": 0,
-    "unmapped_status_events": 110
+    "median_resolution_seconds": 3102.0,
+    "avg_resolution_seconds": 17236.78402366864,
+    "fastest_resolution_seconds": 136.0,
+    "slowest_resolution_seconds": 215948.0,
+    "longest_open_seconds": 483797.0,
+    "max_consecutive_losses": 9,
+    "max_consecutive_wins": 21,
+    "unmapped_status_events": 126
   },
   "integrity": {
-    "ledger_slice_sha256": "40b8d63b7d80ecfbf38c716b96293f38a89f8fbb7f23ab4795819d3eed3e5f18",
+    "ledger_slice_sha256": "720287077fb6f5c8610653048d8c1d51e92734bbe42dece2afb2b7b0a721bc0b",
     "generated_at_utc": "2026-03-09 00:00:00",
     "engine_version": "v2"
   }
