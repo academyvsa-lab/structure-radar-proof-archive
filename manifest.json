@@ -1,6 +1,43 @@
 {
-  "generated_at_utc": "2026-06-15 00:10:03",
+  "generated_at_utc": "2026-06-22 00:10:03",
   "weeks": [
+    {
+      "week": "2026-W25",
+      "totals": {
+        "alerts": 526,
+        "hit_target": 340,
+        "hit_stop": 103,
+        "expired": 6,
+        "open": 77,
+        "ambiguous": 0
+      },
+      "resolved": {
+        "count": 443,
+        "wins": 340,
+        "losses": 103,
+        "win_rate": 0.7674943566591422
+      },
+      "validation_v2": {
+        "median_resolution_seconds": 851.0,
+        "avg_resolution_seconds": 10184.40632054176,
+        "fastest_resolution_seconds": 259.0,
+        "slowest_resolution_seconds": 273553.0,
+        "longest_open_seconds": 600555.0,
+        "max_consecutive_losses": 8,
+        "max_consecutive_wins": 31,
+        "unmapped_status_events": 6791
+      },
+      "targets": {
+        "t1_reached": 340,
+        "t2_reached": 0
+      },
+      "rr": {
+        "avg_t1": 3.092299349240781,
+        "avg_t2": 5.8229284164859,
+        "n_t1": 461,
+        "n_t2": 461
+      }
+    },
     {
       "week": "2026-W24",
       "totals": {

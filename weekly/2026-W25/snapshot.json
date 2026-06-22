@@ -1,0 +1,104 @@
+{
+  "week": "2026-W25",
+  "window": {
+    "start_utc": "2026-06-15 00:00:00",
+    "end_utc": "2026-06-22 00:00:00"
+  },
+  "totals": {
+    "alerts": 526,
+    "hit_target": 340,
+    "hit_stop": 103,
+    "expired": 6,
+    "open": 77,
+    "ambiguous": 0
+  },
+  "resolved": {
+    "count": 443,
+    "wins": 340,
+    "losses": 103,
+    "win_rate": 0.7674943566591422
+  },
+  "targets": {
+    "t1_reached": 340,
+    "t2_reached": 0
+  },
+  "rr": {
+    "avg_t1": 3.092299349240781,
+    "avg_t2": 5.8229284164859,
+    "n_t1": 461,
+    "n_t2": 461
+  },
+  "by_market": {
+    "crypto": {
+      "total": 443,
+      "hit_target": 288,
+      "hit_stop": 76,
+      "expired": 3,
+      "open": 76
+    },
+    "equities": {
+      "total": 83,
+      "hit_target": 52,
+      "hit_stop": 27,
+      "expired": 3,
+      "open": 1
+    }
+  },
+  "by_tier": {
+    "starter": {
+      "total": 42,
+      "hit_target": 32,
+      "hit_stop": 10,
+      "expired": 0,
+      "open": 0
+    },
+    "pro": {
+      "total": 484,
+      "hit_target": 308,
+      "hit_stop": 93,
+      "expired": 6,
+      "open": 77
+    }
+  },
+  "by_setup_type": {
+    "Liquidity Sweep + Reclaim": {
+      "total": 219,
+      "resolved": 150,
+      "wins": 106,
+      "t2": 0
+    },
+    "Break + Retest": {
+      "total": 307,
+      "resolved": 293,
+      "wins": 234,
+      "t2": 0
+    }
+  },
+  "by_timeframe": {
+    "H4": {
+      "total": 112,
+      "resolved": 90,
+      "wins": 75
+    },
+    "H1": {
+      "total": 414,
+      "resolved": 353,
+      "wins": 265
+    }
+  },
+  "validation_v2": {
+    "median_resolution_seconds": 851.0,
+    "avg_resolution_seconds": 10184.40632054176,
+    "fastest_resolution_seconds": 259.0,
+    "slowest_resolution_seconds": 273553.0,
+    "longest_open_seconds": 600555.0,
+    "max_consecutive_losses": 8,
+    "max_consecutive_wins": 31,
+    "unmapped_status_events": 6791
+  },
+  "integrity": {
+    "ledger_slice_sha256": "fc96c9b73d0bb1be61b935a419937e28b69dcab0584a8be5448eac560fa642ae",
+    "generated_at_utc": "2026-06-22 00:00:00",
+    "engine_version": "v2"
+  }
+}
